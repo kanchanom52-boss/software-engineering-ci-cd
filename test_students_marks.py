@@ -1,9 +1,11 @@
+import subprocess
+
 def test_percentage():
-    marks = [80, 80, 80, 80, 80]
-    total = sum(marks)
+    result = subprocess.run(
+        ["python", "student_marks_analyzer.py"],
+        input="80\n80\n80\n80\n80\n",
+        text=True,
+        capture_output=True
+    )
 
-    # Current program's wrong calculation
-    percentage = total / 4
-
-    # Correct expected percentage
-    assert percentage == 80
+    assert "Percentage: 80.0 %" in result.stdout
