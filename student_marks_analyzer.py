@@ -11,7 +11,7 @@ marks5 = float(input("Enter marks for Subject 5: "))
 
 # Calculate total and percentage
 total = marks1 + marks2 + marks3 + marks4 + marks5
-percentage = total / 4
+percentage = total / 5
 
 # Display the result
 print("\n--- Result ---")
